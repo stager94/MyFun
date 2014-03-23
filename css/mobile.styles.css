@@ -1,0 +1,210 @@
+#mobile {
+	width: 640px;
+	display: block;
+	margin: 0 auto;
+	background: #ffffff;
+	min-height: 250px;
+}
+
+#mobile figure {
+	margin: 0;
+	position: relative;
+}
+
+#mobile figure .figure-information {
+	position: absolute;
+	height: 319px;
+	width: 100%;
+	top: 0;
+	padding-left: 30px;
+	box-sizing: border-box !important;
+}
+
+#mobile figure .figure-information .event-type {
+	margin-top: 98px;
+}
+
+#mobile figure .figure-information .event-type img {
+	float: left;
+}
+
+#mobile figure .figure-information .event-type span {
+	font: 100 22px Helvetica;
+	color: #ffffff;
+	padding-left: 7px;
+}
+
+#mobile figure .figure-information .event-clock {
+	position: absolute;
+	bottom: 40px;
+	color: #ffffff;
+	font-family: "HelveticaNeueCyrUltraLight";
+	font-weight: 100;
+	font-size: 24px;
+	background: url("../images/icons/clock.png") no-repeat top left;
+	padding-left: 38px;
+	height: 25px;
+	line-height: 28px;
+}
+
+#mobile figure figcaption {
+	font-family: "HelveticaNeueCyrMedium";
+	margin-top: 8px;
+	font-size: 34px;
+	width: 420px;
+	color: white;
+}
+
+#mobile figure img {
+	display: block;
+}
+
+#mobile .event-people {
+	height: 100px;
+	background: #f6f6f6;
+	box-sizing: border-box;
+	padding: 0 0 0 40px;
+	position: relative;
+}
+
+#mobile .event-people.fixed {
+	position: fixed;
+	top: 0;
+	width: 640px;
+	z-index: 999;
+}
+
+#mobile .event-people .friend-avatar {
+	display: block;
+	float: left;
+	margin-left: -10px;
+	margin-top: 21px;
+}
+
+#mobile .event-people .friend-avatar img {
+	border-radius: 40px;
+	border: 4px solid #fff;
+	box-shadow: -1px 0px 0px rgba(0, 0, 0, .12);
+	display: block;
+}
+
+#mobile .event-people .button {
+	float: right;
+	margin-top: 16px;
+	margin-right: 29px;
+}
+
+#mobile section#events-list {
+	background: url("../images/grad.png") repeat-x top left;
+	min-height: 50px;
+	position: relative;
+	margin-top: 0;
+	/*padding-top: 6px;*/
+}
+
+.event-people .shadow {
+	background: url("../images/grad.png") repeat-x top left;
+	height: 12px;
+	width: 100%;
+	position: absolute;
+	bottom: -12px;
+	z-index: 99;
+	left: 0;
+}
+
+#events-list .event {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid #d3d5d9;
+	background: #f6f6f6;
+	min-height: 140px;
+}
+
+#events-list .event .event-time {
+	display: table-cell;
+	width: 108px;
+	border-right: 2px solid #d3d5d9;
+	vertical-align: top;
+	position: relative;
+}
+
+#events-list .event .event-time .pointer {
+	display: block;
+	width: 27px;
+	height: 37px;
+	background: url("../images/icons/event_blue.png") no-repeat top left;
+	/*position: absolute;*/
+	float: right;
+	margin-top: 39px;
+	margin-right: -15px;
+}
+
+#events-list .event .event-time .counter {
+	font: normal 50px "HelveticaNeueCyrThin";
+	margin-top: 36px;
+	margin-right: 20px;
+	float: right;
+}
+#events-list .event .event-time .time {
+	clear: both;
+	text-align: right;
+	padding-right: 25px;
+	font: 100 17px Helvetica;
+	color: #909294;
+}
+
+#events-list .event .event-info {
+	padding-left: 43px;
+}
+
+#events-list .event .event-info .event-action {
+	float: right;
+	margin-right: 38px;
+}
+
+
+#events-list .event .event-info .event-type {
+	padding-top: 22px;
+	display: table;
+	font: 100 22px Helvetica;
+	color: #9b9d9e;
+	/*height: 32px;*/
+}
+#events-list .event .event-info .event-distance {
+	float: right;
+	margin-top: 25px;
+	margin-right: 25px;
+	font: normal 22px "HelveticaNeueCyrLight";
+}
+#events-list .event .event-info .event-type img {
+	/*float: left;*/
+	padding-right: 8px;
+	vertical-align: bottom;
+}
+#events-list .event .event-info .event-title {
+	font: 100 24px Helvetica;
+	color: #0089b5;
+	width: 298px;
+	line-height: 30px;
+	margin-top: 7px;
+}
+#events-list .event .event-info .event-address {
+	font: 100 17px Helvetica;
+	color: #6b6f71;
+	margin-top: 5px;
+	margin-bottom: 23px;
+}
+
+#events-list .event.active {
+	background: #ffffff;
+}
+#events-list .event.active .event-info .event-title {
+	font: normal 24px/30px "HelveticaNeueCyrMedium";
+	color: #f15c24;
+}
+#events-list .event.active .event-time .time {
+	color: #f15c24;
+}
+#events-list .event.active .event-time .pointer {
+	background: url("../images/icons/event_orange.png") no-repeat top left;
+}

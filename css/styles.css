@@ -1,0 +1,150 @@
+@font-face {
+	font-family: "HelveticaNeueCyrMedium";
+	src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium.otf") format("opentype");
+}
+@font-face {
+	font-family: "HelveticaNeueCyrUltraLight";
+	src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-UltraLight.otf") format("opentype");
+}
+@font-face {
+	font-family: "HelveticaNeueCyrLight";
+	src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light.otf") format("opentype");
+}
+@font-face {
+	font-family: "HelveticaNeueCyrThin";
+	src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin.otf") format("opentype");
+}
+@font-face {
+	font-family: "HelveticaNeueCyrBold";
+	src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.otf") format("opentype");
+}
+
+/*---------------*/
+/* Global Styles */
+/*---------------*/
+body { margin: 0; }
+
+body.bg-home {
+	background: url("../images/main_bg.jpg") no-repeat top left;
+}
+
+body.bg-main {
+	background: #f1f1f1;
+}
+
+html, body {
+	height: 100%;
+}
+
+/*---------------*/
+/* Header Styles */
+/*---------------*/
+header {
+	background-color: #ffffff;
+	height: 99px;
+}
+header .container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header.adaptive .container {
+	width: auto;
+	padding: 0 30px;
+}
+
+header nav#navigation {
+	display: inline-block;
+}
+header nav#navigation a {
+	color: #007ca4;
+	text-decoration: underline;
+	font: normal 10px/99px "Open Sans", Arial, Helvetica;
+	text-transform: uppercase;
+	padding: 0 21px;
+	letter-spacing: 2px;
+}
+header nav#navigation a:hover {
+	color: #f15c24;
+	text-decoration: none;
+}
+header nav#navigation a.active {
+	color: #666666;
+	text-decoration: none;
+}
+
+header nav#download {
+	float: right;
+	margin-top: 28px;
+}
+header nav#download a {
+	float: left;
+	margin-left: 11px;
+}
+
+.myfun-logotype {
+	float: left;
+	margin-top: 33px;
+}
+
+/*----------------*/
+/* Content Styles */
+/*----------------*/
+section {
+	height: 100%;
+}
+#container {
+	margin-top: -100px;
+	height: 100%;
+	padding-top: 100px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+#container .footer-guarantor {
+	clear: both;
+	height: 50px;
+}
+
+/*---------------*/
+/* Footer Styles */
+/*---------------*/
+footer {
+	clear: both;
+	height: 50px;
+	background: transparent;
+	border-top: 1px solid rgba(255, 255, 255, .29);
+	margin-top: -50px;
+}
+
+footer .container {
+	width: 1200px;
+	margin: 0 auto;
+	font: normal 12px/50px Arial, Helvetica;
+	color: #ffffff;
+}
+
+/*-----------------*/
+/* Specific Styles */
+/*-----------------*/
+.button {
+	height: 67px;
+	line-height: 67px;
+	padding: 0 67px 0 25px;
+	border-radius: 10px;
+	font-size: 24px;
+	font-family: Helvetica;
+	text-decoration: none;
+}
+
+.button.green {
+	background-color: #018241;
+	color: #ffffff;
+}
+
+.button.go {
+	background-image: url("../images/icons/go.png");
+	background-repeat: no-repeat;
+	background-position: top 10px right 15px;
+}
