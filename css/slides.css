@@ -6,6 +6,7 @@
 	max-width: 1920px;
 	position: relative;
   box-shadow: rgba(0,0,0,.3) 0px 57px 50px -50px inset;
+  overflow: hidden;
 }
 
 .bg-slide article {
@@ -20,8 +21,8 @@
 	margin: 0 auto;
 	display: table;
 }
-.bg-slide article .content img {
-	float: left;
+.bg-slide article .content .information {
+	text-align: left;
 }
 .bg-slide article .content h1 {
 	text-align: left;
@@ -44,4 +45,32 @@
 }
 .bg-slide.slide-5 {
 	background: url("../images/slides/slide-5.jpg") center 0 repeat fixed;
+}
+
+.slide-1 .preferences {
+	margin-top: 60px;
+}
+.slide-1 .preferences .item {
+	width: 230px;
+	display: inline-block;
+	margin-bottom: 7px;
+	font: normal 12px Arial;
+}
+.slide-1 .preferences .item.films { color: #0ba758; }
+.slide-1 .preferences .item.likes { color: #fe5b18; }
+.slide-1 .preferences .item.music { color: #027aa0; }
+.slide-1 .preferences .item.posts { color: #094aa1; }
+.slide-1 .preferences .item.checkins { color: #fe5b18; }
+.slide-1 .preferences .item.friends { color: #018241; }
+.slide-1 .preferences .item img {
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.slide-2 h1 {
+	color: white;
+}
+.slide-2 h3 {
+	font: normal 24px "Marmelad";
+	color: white;
 }
