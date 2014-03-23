@@ -7,12 +7,13 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
 		<link rel="stylesheet" type="text/css" href="./css/styles.adaptive.css">
+		<link rel="stylesheet" type="text/css" href="./css/slides.css">
 		<!--[if lt IE 9]> 
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
 		<![endif]-->
 	</head>
 	<body>
-		<header>
+		<header class="fixed">
 			<div class="container" role="main">
 				<div class="myfun-logotype"><a href="./promo.html"><img src="./images/myfun_logotype.png" alt="MyFun"></a></div>
 				<nav id="download">
@@ -20,40 +21,35 @@
 					<a href="#" target="_blank"><img src="./images/ban_googleplay.png"></a>
 				</nav>
 				<nav id="navigation">
-					<a href="./capabilities.html">Возможности MyFun</a>
+					<a href="./capabilities.html" class="active">Возможности MyFun</a>
 					<a href="./download.html">Скачать приложение</a>
 				</nav>
 			</div>
 		</header>
-		<div id="container">
-			<section id="home-slide" data-type="background" data-speed="8" class="bg-home">
-				<hgroup class="home-header">
-					<h1>Где провести вечер?</h1>
-					<h3>Не трать время на поиск!</h3>
-					<h3>MyFun подскажет лучший план!</h3>
-				</hgroup>
-				<div class="buttons-container">
-					<div class="buttons">
-						<a href="./capabilities.html" class="big-button capabilities inline" style="margin-right: 330px;">
-							<div class="square"></div>
-							<span>Возможности MyFun</span>
-						</a>
-						<a href="./download.html" class="big-button download inline">
-							<div class="square"></div>
-							<span>Скачать приложение</span>
-						</a>
-					</div>
-				</div>
-				
-				<img src="./images/home-hand.png" alt="Hand with iPhone" class="slide-centered-image" style="padding-left:290px; margin-top: 113px;">
-			</section>
-			<div class="footer-guarantor"></div>
-		</div>
-		<footer>
+		
+		<section data-type="background" data-speed="8" class="bg-slide slide-1" data-type="background" data-speed="4">
+			<article>
+				<img src="./images/slides/1_ipnone.png" alt="зАГОЛОВОК ПРОсоциальные профили">
+			</article>
+		</section>
+		<section data-type="background" data-speed="8" class="bg-slide slide-2" data-type="background" data-speed="4">
+			<article>Только самые интересные события</article>
+		</section>
+		<section data-type="background" data-speed="8" class="bg-slide slide-3" data-type="background" data-speed="4">
+			<article>Обучение приложения</article>
+		</section>
+		<section data-type="background" data-speed="8" class="bg-slide slide-4" data-type="background" data-speed="4">
+			<article>Узнай про акции</article>
+		</section>
+		<section data-type="background" data-speed="8" class="bg-slide slide-5" data-type="background" data-speed="4">
+			<article>Поделись с друзьями</article>
+		</section>
+
+		<!-- <footer>
 			<div class="container">
 				2014 &copy; все что можно все защищено. Не воруй, Придумай другой план
 			</div>
-		</footer>
+		</footer> -->
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="./js/browser.mobile.js"></script>

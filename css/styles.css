@@ -18,6 +18,10 @@
 	font-family: "HelveticaNeueCyrBold";
 	src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold.otf") format("opentype");
 }
+@font-face {
+	font-family: "HelveticaNeueCyrRoman";
+	src: url("../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman.otf") format("opentype");
+}
 
 /*---------------*/
 /* Global Styles */
@@ -246,6 +250,8 @@ a.big-button.download .square {
 
 .fixed {
 	position: fixed;
+	z-index: 99;
+	width: 100%;
 }
 
 .absolute {

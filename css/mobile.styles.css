@@ -13,15 +13,16 @@
 
 #mobile figure .figure-information {
 	position: absolute;
-	height: 319px;
 	width: 100%;
-	top: 0;
-	padding-left: 30px;
-	box-sizing: border-box !important;
+	padding-left: 28px;
+	box-sizing: border-box;
+	height: 108px;
+	bottom: 0;
+	background: rgba(0, 137, 181, .79);
 }
 
 #mobile figure .figure-information .event-type {
-	margin-top: 98px;
+	margin-top: 29px;
 }
 
 #mobile figure .figure-information .event-type img {
@@ -35,24 +36,38 @@
 }
 
 #mobile figure .figure-information .event-clock {
-	position: absolute;
-	bottom: 40px;
+	/*position: absolute;*/
+	/*bottom: 40px;*/
 	color: #ffffff;
-	font-family: "HelveticaNeueCyrUltraLight";
+	font-family: "HelveticaNeueCyrLight";
 	font-weight: 100;
 	font-size: 24px;
 	background: url("../images/icons/clock.png") no-repeat top left;
-	padding-left: 38px;
+	padding-left: 35px;
 	height: 25px;
-	line-height: 28px;
+	float: right;
+	margin-top: 5px;
+	line-height: 30px;
+	margin-right: 30px;
+	/*line-height: 28px;*/
 }
 
-#mobile figure figcaption {
+#mobile figure .figure-information .event-today {
+	float: right;
+	margin-right: 30px;
+	font-family: "HelveticaNeueCyrLight" !important;
+}
+
+#mobile figure .figcaption {
 	font-family: "HelveticaNeueCyrMedium";
 	margin-top: 8px;
-	font-size: 34px;
-	width: 420px;
+	padding-left: 35px;
+	font-size: 24px;
 	color: white;
+	width: 400px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #mobile figure img {
