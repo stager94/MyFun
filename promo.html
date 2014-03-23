@@ -7,10 +7,10 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
 		<!--[if lt IE 9]> 
-	  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
-	  <![endif]-->
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+		<![endif]-->
 	</head>
-	<body class="bg-home">
+	<body>
 		<header>
 			<div class="container" role="main">
 				<div class="myfun-logotype"><img src="./images/myfun_logotype.png"></div>
@@ -25,6 +25,14 @@
 			</div>
 		</header>
 		<div id="container">
+			<section id="home-slide" data-type="background" data-speed="8" class="bg-home">
+				<hgroup class="home-header">
+					<h1>Где провести вечер?</h1>
+					<h3>Не трать время на поиск!</h3>
+					<h3>MyFun подскажет лучший план!</h3>
+				</hgroup>
+				<img src="./images/home-hand.png" alt="Hand with iPhone" class="slide-centered-image" style="padding-left:290px;">
+			</section>
 			<div class="footer-guarantor"></div>
 		</div>
 		<footer>
@@ -32,5 +40,21 @@
 				2014 &copy; все что можно все защищено. Не воруй, Придумай другой план
 			</div>
 		</footer>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('section[data-type="background"]').each(function(){
+					var $bgobj = $(this); // создаем объект
+					$(window).scroll(function() {
+						var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
+						// Присваиваем значение background-position
+						var coords = 'center '+ yPos + 'px';
+						// Создаем эффект Parallax Scrolling
+						$bgobj.css({ backgroundPosition: coords });
+					});
+				});
+			});
+		</script>
 	</body>
 </html>

@@ -24,7 +24,7 @@
 /*---------------*/
 body { margin: 0; }
 
-body.bg-home {
+.bg-home {
 	background: url("../images/main_bg.jpg") no-repeat top left;
 }
 
@@ -95,7 +95,7 @@ section {
 }
 #container {
 	margin-top: -100px;
-	height: 100%;
+	min-height: 100%;
 	padding-top: 100px;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -103,8 +103,8 @@ section {
 	-o-box-sizing: border-box;
 }
 #container .footer-guarantor {
-	clear: both;
-	height: 50px;
+	/*clear: both;*/
+	/*height: 50px;*/
 }
 
 /*---------------*/
@@ -113,6 +113,8 @@ section {
 footer {
 	clear: both;
 	height: 50px;
+	width: 100%;
+	position: absolute;
 	background: transparent;
 	border-top: 1px solid rgba(255, 255, 255, .29);
 	margin-top: -50px;
@@ -147,4 +149,30 @@ footer .container {
 	background-image: url("../images/icons/go.png");
 	background-repeat: no-repeat;
 	background-position: top 10px right 15px;
+}
+
+.slide-centered-image {
+	margin: 0 auto -1px;
+	display: block;
+}
+
+/*---------*/
+/* Headers */
+/*---------*/
+hgroup.home-header {
+	margin-bottom: 40px;
+}
+hgroup.home-header h1 {
+	text-align: center;
+	margin: 0;
+	padding: 118px 0 13px;
+	font: normal 60px Marmelad, sans-serif;
+	color: white;
+	text-shadow: 0 1px 1px rgba(0,0,0,.35);
+}
+hgroup.home-header h3 {
+	text-align: center;
+	font: normal 24px Marmelad, sans-serif;
+	color: white;
+	margin: 7px 0;
 }
