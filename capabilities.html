@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Возможности MYFUN</title>		
-		<link href='http://fonts.googleapis.com/css?family=Marmelad&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Marmelad&amp;subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
 		<link rel="stylesheet" type="text/css" href="./css/styles.adaptive.css">
 		<link rel="stylesheet" type="text/css" href="./css/slides.css">
@@ -17,8 +17,8 @@
 			<div class="container" role="main">
 				<div class="myfun-logotype"><a href="./promo.html"><img src="./images/myfun_logotype.png" alt="MyFun"></a></div>
 				<nav id="download">
-					<a href="#" target="_blank"><img src="./images/ban_appstore.png"></a>
-					<a href="#" target="_blank"><img src="./images/ban_googleplay.png"></a>
+					<a href="#" target="_blank"><img src="./images/ban_appstore.png" alt="Available on the App Store"></a>
+					<a href="#" target="_blank"><img src="./images/ban_googleplay.png" alt="Get it on Google Play"></a>
 				</nav>
 				<nav id="navigation">
 					<a href="./capabilities.html" class="active">Возможности MyFun</a>
@@ -27,21 +27,28 @@
 			</div>
 		</header>
 		
-		<section data-type="background" data-speed="8" class="bg-slide slide-1" data-type="background" data-speed="4">
+		<section data-type="background" data-speed="4" class="bg-slide slide-1">
 			<article>
-				<img src="./images/slides/1_ipnone.png" alt="зАГОЛОВОК ПРОсоциальные профили">
+				<div class="content">
+					<img src="./images/slides/1_ipnone.png" alt="зАГОЛОВОК ПРОсоциальные профили"  data-type="video" data-offsetY="0" data-speed="-2.5">
+					<div class="information">
+						<h1 style="padding-top: 65px;">зАГОЛОВОК ПРО социальные профили</h1>
+						<img src="./images/slides/1_socials.png" alt="Facebook or VK" style="margin-top: 40px;">
+					</div>
+				</div>
+				
 			</article>
 		</section>
-		<section data-type="background" data-speed="8" class="bg-slide slide-2" data-type="background" data-speed="4">
+		<section data-type="background" data-speed="4" class="bg-slide slide-2">
 			<article>Только самые интересные события</article>
 		</section>
-		<section data-type="background" data-speed="8" class="bg-slide slide-3" data-type="background" data-speed="4">
+		<section data-type="background" data-speed="10" class="bg-slide slide-3">
 			<article>Обучение приложения</article>
 		</section>
-		<section data-type="background" data-speed="8" class="bg-slide slide-4" data-type="background" data-speed="4">
+		<section data-type="background" data-speed="15" class="bg-slide slide-4">
 			<article>Узнай про акции</article>
 		</section>
-		<section data-type="background" data-speed="8" class="bg-slide slide-5" data-type="background" data-speed="4">
+		<section data-type="background" data-speed="20" class="bg-slide slide-5">
 			<article>Поделись с друзьями</article>
 		</section>
 
@@ -54,18 +61,110 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="./js/browser.mobile.js"></script>
 		<script type="text/javascript">
+			// $(document).ready(function(){
+			// 	if (!jQuery.browser.mobile) {
+			// 		$('section[data-type="background"]').each(function(){
+			// 			var $bgobj = $(this);
+			// 			$(window).scroll(function() {
+			// 				var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
+			// 				var coords = 'center '+ yPos + 'px';
+			// 				$bgobj.css({ backgroundPosition: coords });
+			// 			});
+			// 		});
+			// 	}
+			// });
+
+
+			/**
+			 * Parallax Scrolling Tutorial
+			 * For Smashing Magazine
+			 * July 2011
+			 *   
+			 * Author: Richard Shepherd
+			 * 		   www.richardshepherd.com
+			 * 		   @richardshepherd   
+			 */
+
+			// On your marks, get set...
 			$(document).ready(function(){
-				if (!jQuery.browser.mobile) {
-					$('section[data-type="background"]').each(function(){
-						var $bgobj = $(this);
-						$(window).scroll(function() {
-							var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
-							var coords = 'center '+ yPos + 'px';
-							$bgobj.css({ backgroundPosition: coords });
-						});
-					});
-				}
-			});
+
+				// Cache the Window object
+				$window = $(window);
+
+				// Cache the Y offset and the speed of each sprite
+				$('[data-type]').each(function() {	
+					$(this).data('offsetY', parseInt($(this).attr('data-offsetY')));
+					$(this).data('Xposition', $(this).attr('data-Xposition'));
+					$(this).data('speed', $(this).attr('data-speed'));
+				});
+
+				// For each element that has a data-type attribute
+				$('section[data-type="background"]').each(function(){
+
+
+					// Store some variables based on where we are
+					var $self = $(this),
+						offsetCoords = $self.offset(),
+						topOffset = offsetCoords.top;
+
+					// When the window is scrolled...
+				    $(window).scroll(function() {
+
+						// If this section is in view
+						if ( ($window.scrollTop() + $window.height()) > (topOffset) &&
+							 ( (topOffset + $self.height()) > $window.scrollTop() ) ) {
+
+							// Scroll the background at var speed
+							// the yPos is a negative value because we're scrolling it UP!								
+							var yPos = -($window.scrollTop() / $self.data('speed')); 
+
+							// If this element has a Y offset then add it on
+							if ($self.data('offsetY')) {
+								yPos += $self.data('offsetY');
+							}
+
+							// Put together our final background position
+							var coords = '50% '+ yPos + 'px';
+
+							// Move the background
+							$self.css({ backgroundPosition: coords });
+
+							// Check for other sprites in this section	
+							$('[data-type="sprite"]', $self).each(function() {
+
+								// Cache the sprite
+								var $sprite = $(this);
+
+								// Use the same calculation to work out how far to scroll the sprite
+								var yPos = -($window.scrollTop() / $sprite.data('speed'));					
+								var coords = $sprite.data('Xposition') + ' ' + (yPos + $sprite.data('offsetY')) + 'px';
+
+								$sprite.css({ backgroundPosition: coords });													
+
+							}); // sprites
+
+							// Check for any Videos that need scrolling
+							$('[data-type="video"]', $self).each(function() {
+
+								// Cache the video
+								var $video = $(this);
+
+								// There's some repetition going on here, so 
+								// feel free to tidy this section up. 
+								var yPos = -($window.scrollTop() / $video.data('speed'));					
+								var coords = (yPos + $video.data('offsetY')) + 'px';
+
+								$video.css({ marginTop: coords });													
+
+							}); // video	
+
+						}; // in view
+
+					}); // window scroll
+
+				});	// each data-type
+
+			}); // document ready
 		</script>
 	</body>
 </html>
