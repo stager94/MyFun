@@ -31,7 +31,20 @@
 					<h3>Не трать время на поиск!</h3>
 					<h3>MyFun подскажет лучший план!</h3>
 				</hgroup>
-				<img src="./images/home-hand.png" alt="Hand with iPhone" class="slide-centered-image" style="padding-left:290px;">
+				<div class="buttons-container">
+					<div class="buttons">
+						<a href="#" class="big-button capabilities fl_left" style="margin-right: 330px;">
+							<div class="square"></div>
+							<span>Возможности MyFun</span>
+						</a>
+						<a href="#" class="big-button download">
+							<div class="square"></div>
+							<span>Скачать приложение</span>
+						</a>
+					</div>
+				</div>
+				
+				<img src="./images/home-hand.png" alt="Hand with iPhone" class="slide-centered-image" style="padding-left:290px; margin-top: 113px;">
 			</section>
 			<div class="footer-guarantor"></div>
 		</div>
@@ -45,12 +58,10 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('section[data-type="background"]').each(function(){
-					var $bgobj = $(this); // создаем объект
+					var $bgobj = $(this);
 					$(window).scroll(function() {
-						var yPos = -($(window).scrollTop() / $bgobj.data('speed')); // вычисляем коэффициент 
-						// Присваиваем значение background-position
+						var yPos = -($(window).scrollTop() / $bgobj.data('speed'));
 						var coords = 'center '+ yPos + 'px';
-						// Создаем эффект Parallax Scrolling
 						$bgobj.css({ backgroundPosition: coords });
 					});
 				});

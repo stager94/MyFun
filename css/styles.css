@@ -91,7 +91,8 @@ header nav#download a {
 /* Content Styles */
 /*----------------*/
 section {
-	height: 100%;
+	/*height: 100%;*/
+	width: 100%;
 }
 #container {
 	margin-top: -100px;
@@ -175,4 +176,55 @@ hgroup.home-header h3 {
 	font: normal 24px Marmelad, sans-serif;
 	color: white;
 	margin: 7px 0;
+}
+
+a.big-button .square {
+	width: 138px;
+	height: 138px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, .66);
+	margin: 0 auto;
+}
+
+a.big-button span {
+	font: normal 10px "Open Sans";
+	color: white;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	display: block;
+	margin-top: 15px;
+}
+
+a.big-button {
+	text-decoration: none;
+	display: table;
+	text-align: center;
+}
+
+a.big-button.capabilities .square {
+	background-color: rgba(57, 147, 179, .5);
+	background-image: url("../images/icons/big-button-capabilities.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+a.big-button.download .square {
+	background-color: rgba(65, 142, 72, .5);
+	background-image: url("../images/icons/big-button-download.png");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.buttons {
+	display: table;
+	margin: 0 auto;
+}
+
+.fl_left {
+	float: left;
+}
+
+.buttons-container {
+	position: absolute;
+	width: 100%;
 }
