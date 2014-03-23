@@ -197,7 +197,7 @@ a.big-button span {
 
 a.big-button {
 	text-decoration: none;
-	display: table;
+	/*display: table;*/
 	text-align: center;
 }
 
@@ -222,6 +222,9 @@ a.big-button.download .square {
 
 .fl_left {
 	float: left;
+}
+.inline {
+	display: inline-block;
 }
 
 .buttons-container {
