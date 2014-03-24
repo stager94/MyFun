@@ -1,6 +1,7 @@
 .bg-slide {
 	height: 100%;
 	min-height: 850px;
+	max-height: 1200px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1920px;
@@ -104,4 +105,51 @@
 .slide-5 p b {
 	color: #000;
 	padding-bottom: 10px;
+}
+
+#tab-navigation {
+	position: fixed;
+	top: 145px;
+	z-index: 100;
+	background: url("../images/icons/nav-line_gray.png") repeat-y left 10px top;
+	margin-left: 37px;
+	margin-top: -13px;
+}
+
+#tab-navigation a {
+	display: block;
+	color: rgba(62, 62, 62, .5);
+	text-decoration: none;
+	font: normal 14px "Open Sans";
+	margin-top: 50px;
+	background: url("../images/icons/nav-empty_gray.png") no-repeat left center;
+	min-height: 22px;
+	padding-left: 40px;
+}
+#tab-navigation.gray {
+	background: url("../images/icons/nav-line_gray.png") repeat-y left 10px top;
+}
+#tab-navigation.gray a {
+	background: url("../images/icons/nav-empty_gray.png") no-repeat left center;
+	color: rgba(62, 62, 62, .36);
+}
+#tab-navigation.dark {
+	background: url("../images/icons/nav-line_dark.png") repeat-y left 10px top;
+}
+#tab-navigation.dark a {
+	background: url("../images/icons/nav-empty_dark.png") no-repeat left center;
+	color: rgba(255, 255, 255, .36);
+}
+#tab-navigation.blue {
+	background: url("../images/icons/nav-line_blue.png") repeat-y left 10px top;
+}
+#tab-navigation.blue a {
+	background: url("../images/icons/nav-empty_blue.png") no-repeat left center;
+	color: rgba(62, 62, 62, .36);
+}
+
+#tab-navigation a.active {
+	color: #f15c24;
+	font-weight: bold;
+	background: url("../images/icons/nav-active.png") no-repeat left center;
 }

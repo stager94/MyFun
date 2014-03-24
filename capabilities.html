@@ -24,10 +24,18 @@
 					<a href="./capabilities.html" class="active">Возможности MyFun</a>
 					<a href="./download.html">Скачать приложение</a>
 				</nav>
+
+				<nav id="tab-navigation">
+					<a href="#social_analize" data-scroll="social_analize">Анализатор<br />социального профиля</a>
+					<a href="#interesting_events" data-scroll="interesting_events">Только самые<br />интересные события</a>
+					<a href="#teach_app" data-scroll="teach_app">Обучение<br />Приложения</a>
+					<a href="#actions" data-scroll="actions">Узнай про акции</a>
+					<a href="#share" data-scroll="share">Поделись с друзьями</a>
+				</nav>
 			</div>
 		</header>
 		
-		<section data-type="background" data-speed="4" class="bg-slide slide-1">
+		<section data-type="background" data-speed="4" class="bg-slide slide-1"  id="social_analize" data-anchor="social_analize" data-color="gray">
 			<article>
 				<div class="content">
 					<img src="./images/slides/1_ipnone.png" alt="зАГОЛОВОК ПРОсоциальные профили"  data-type="video" data-offsetY="0" data-speed="-2.5" class="fl_left">
@@ -47,7 +55,7 @@
 			</article>
 		</section>
 
-		<section data-type="background" data-speed="8" class="bg-slide slide-2">
+		<section data-type="background" data-speed="8" class="bg-slide slide-2" id="interesting_events" data-anchor="interesting_events" data-color="dark">
 			<article>
 				<div class="content">
 					<img src="./images/slides/2_ipnone.png" alt="зАГОЛОВОК ПРОсоциальные профили"  data-type="video" data-offsetY="250" data-speed="4" class="fl_left">
@@ -60,7 +68,7 @@
 			</article>
 		</section>
 
-		<section data-type="background" data-speed="13" class="bg-slide slide-3">
+		<section data-type="background" data-speed="13" class="bg-slide slide-3" id="teach_app" data-anchor="teach_app" data-color="dark">
 			<article>
 				<div class="content">
 					<img src="./images/slides/3_ipnone.png" alt="зАГОЛОВОК ПРОсоциальные профили" class="fl_left">
@@ -76,7 +84,7 @@
 			</article>
 		</section>
 
-		<section data-type="background" data-speed="15" class="bg-slide slide-4">
+		<section data-type="background" data-speed="15" class="bg-slide slide-4" id="actions" data-anchor="actions" data-color="blue">
 			<article>
 				<div class="content">
 					<img src="./images/slides/4_iphone.png" alt="зАГОЛОВОК ПРОсоциальные профили"  data-type="video" data-offsetY="500" data-speed="5" class="fl_left">
@@ -91,10 +99,10 @@
 			</article>
 		</section>
 
-		<section data-type="background" data-speed="20" class="bg-slide slide-5">
+		<section data-type="background" data-speed="20" class="bg-slide slide-5" id="share" data-anchor="share" data-color="blue">
 			<article>
 				<div class="content">
-					<img src="./images/slides/5_iphone.png" alt="зАГОЛОВОК ПРОсоциальные профили"  data-type="video" data-offsetY="-1350" data-speed="-2.5" class="fl_left">
+					<img src="./images/slides/5_iphone.png" alt="зАГОЛОВОК ПРОсоциальные профили"  data-type="video" data-offsetY="-1370" data-speed="-2.5" class="fl_left">
 					<div class="information">
 						<img src="./images/slides/5_friends.png" alt="Facebook or VK" style="margin-top: 40px;">
 						<h1 style="padding-top: 65px;">Кто возьмет<br />билетов пачку....</h1>
@@ -111,97 +119,8 @@
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="./js/browser.mobile.js"></script>
-		<script type="text/javascript">
-			/**
-			 * Parallax Scrolling Tutorial
-			 * For Smashing Magazine
-			 * July 2011
-			 *   
-			 * Author: Richard Shepherd
-			 * 		   www.richardshepherd.com
-			 * 		   @richardshepherd   
-			 */
+		<script src="./js/slides.nav.js"></script>
+		<script src="./js/parallax.js"></script>
 
-			// On your marks, get set...
-			$(document).ready(function(){
-
-				// Cache the Window object
-				$window = $(window);
-
-				// Cache the Y offset and the speed of each sprite
-				$('[data-type]').each(function() {	
-					$(this).data('offsetY', parseInt($(this).attr('data-offsetY')));
-					$(this).data('Xposition', $(this).attr('data-Xposition'));
-					$(this).data('speed', $(this).attr('data-speed'));
-				});
-
-				// For each element that has a data-type attribute
-				$('section[data-type="background"]').each(function(){
-
-
-					// Store some variables based on where we are
-					var $self = $(this),
-						offsetCoords = $self.offset(),
-						topOffset = offsetCoords.top;
-
-					// When the window is scrolled...
-				    $(window).scroll(function() {
-
-						// If this section is in view
-						if ( ($window.scrollTop() + $window.height()) > (topOffset) &&
-							 ( (topOffset + $self.height()) > $window.scrollTop() ) ) {
-
-							// Scroll the background at var speed
-							// the yPos is a negative value because we're scrolling it UP!								
-							var yPos = -($window.scrollTop() / $self.data('speed')); 
-
-							// If this element has a Y offset then add it on
-							if ($self.data('offsetY')) {
-								yPos += $self.data('offsetY');
-							}
-
-							// Put together our final background position
-							var coords = '50% '+ yPos + 'px';
-
-							// Move the background
-							$self.css({ backgroundPosition: coords });
-
-							// Check for other sprites in this section	
-							$('[data-type="sprite"]', $self).each(function() {
-
-								// Cache the sprite
-								var $sprite = $(this);
-
-								// Use the same calculation to work out how far to scroll the sprite
-								var yPos = -($window.scrollTop() / $sprite.data('speed'));					
-								var coords = $sprite.data('Xposition') + ' ' + (yPos + $sprite.data('offsetY')) + 'px';
-
-								$sprite.css({ backgroundPosition: coords });													
-
-							}); // sprites
-
-							// Check for any Videos that need scrolling
-							$('[data-type="video"]', $self).each(function() {
-
-								// Cache the video
-								var $video = $(this);
-
-								// There's some repetition going on here, so 
-								// feel free to tidy this section up. 
-								var yPos = -($window.scrollTop() / $video.data('speed'));					
-								var coords = (yPos + $video.data('offsetY')) + 'px';
-
-								$video.css({ marginTop: coords });													
-
-							}); // video	
-
-						}; // in view
-
-					}); // window scroll
-
-				});	// each data-type
-
-			}); // document ready
-		</script>
 	</body>
 </html>

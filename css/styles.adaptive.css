@@ -1,7 +1,11 @@
 @media screen and (min-width: 1200px) {
 	header .container {
-		width: 1200px;
+		max-width: 100%;
 		margin: 0 auto;
+		padding: 0 30px;
+		box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 	}
 	footer .container {
 		width: 1200px;
@@ -11,5 +15,11 @@
 @media screen and (min-width: 800px) {
 	.bg-download {
 		background: url("../images/dwnld_bg.png") no-repeat left 50% bottom -150px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.bg-slide .content {
+		padding-left: 120px;
 	}
 }
