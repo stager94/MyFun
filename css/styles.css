@@ -140,6 +140,14 @@ footer .container {
 	font: normal 12px/50px Arial, Helvetica;
 	color: #ffffff;
 }
+footer .container .socials {
+	float: right;
+	height: 30px;
+	margin-top: 10px;
+}
+footer .container .socials a {
+	margin-left: 5px;
+}
 
 /*-----------------*/
 /* Specific Styles */
